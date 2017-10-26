@@ -1,0 +1,48 @@
+{
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "React": true,
+    "describe": true,
+    "it": true
+  },
+  rules: {
+    'prettier/prettier': [ // customizing prettier rules (unfortunately not many of them are customizable)
+      'error',
+      {
+        singleQuote: true,
+        jsxBracketSameLine: true,
+        tabWidth: 4
+      },
+    ],
+    "eqeqeq": ["error", "always"],
+    "no-extra-semi": ["error"],
+    "no-unused-vars": ["error", {"vars": "all", "args": "after-used"}],
+    "no-use-before-define": ["error", {"functions": false}]
+  },
+  settings: {
+  "react": {
+        "pragma": "React",  // Pragma to use, default to "React"
+        "version": "15.3.0", // React version, default to the latest React stable release
+      },
+  }
+}
+
